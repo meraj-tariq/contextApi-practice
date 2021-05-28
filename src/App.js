@@ -5,6 +5,7 @@ import { useState } from 'react';
 import ThemeContext from './Context/ThemeContext';
 import LanguageContext from './components/localization/LanguageContext';
 import { LanguageProvider } from './components/localization/localContext/LocalContex';
+import ReactCounter from './components/counter/reactCounter';
 
 function App() {
   const themeHook = useState("light");
@@ -14,9 +15,13 @@ function App() {
         <Header />
         <Main />
       </ThemeContext.Provider>
+
       <LanguageProvider>
         <LanguageContext />
       </LanguageProvider>
+      
+      <ReactCounter/>
+        
     </>
   );
 }
